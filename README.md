@@ -1,4 +1,4 @@
-# Causal-Inference-using-Markov-Blanket
+# Causal Inference Using Markov Blanket
 
 ## 1. ABSTRACT
 Causality in simple terms can be described as the agency that connects one process
@@ -94,7 +94,7 @@ independence. Other tests such as Chi-square test etc. can also be used.
 Below is the algorithm to find conditional independence between two variables
 conditioned on a set. <br />
 
-#### ALGORITHM 2 : Conditional Independence
+### ALGORITHM 2 : Conditional Independence
 ##### 1. Initialization: <br />
 Set S = “empty set”, set X = ”initial set of all D features”. <br />
 
@@ -108,8 +108,10 @@ Find feature X ∈ X that maximizes I (C,Xi) ; set X = X \ {X}, S = {X}.
 Repeat until the desired number of features is selected.<br />
 (a) Computation of entropy:<br />
 For all Xs ∈ S compute entropy H(Xs), if it is not already available.<br />
+
 (b) Computation of the MI between features:<br />
 For all pairs of features (Xi, Xs) with Xi ∈ X, Xs ∈ S compute I(Xi, Xs), if it is not yet available.<br />
+
 (c) Selection of the next feature:<br />
 Find feature X+ ∈ X according to formula :<br />
 X+ = arg maxXi ∈ X\S { I(C,Xi) − maxXs ∈ S CU(Xi,Xs) I(C,Xs)}.<br />
@@ -137,7 +139,7 @@ the accuracy was predicted as follows:
 
 [No. of features selected (Markov blanket)/ Total features] & [Accuracy of results(in %)]
 
-LUCAS0. 5/11. 95.34 <br />
-LUCAP0. 42/143. 97.07 <br />
-REGED0. 8/999. 91.85 <br />
-SIDO0. 2/4932. 98.67 <br />
+#### LUCAS0 5/11 95.34 <br />
+#### LUCAP0 42/143 97.07 <br />
+#### REGED0 8/999 91.85 <br />
+#### SIDO0 2/4932 98.67 <br />
