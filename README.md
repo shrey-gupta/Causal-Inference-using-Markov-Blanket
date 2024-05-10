@@ -108,7 +108,7 @@ Set S = “empty set”, set X = ”initial set of all D features”. <br />
 For all features Xi ∈ X compute I (C,Xi).
 
 ##### 3. Selection of the first feature:<br />
-Find feature X ∈ X that maximizes I (C,Xi) ; set X = X \ {X}, S = {X}.
+Find feature X ∈ X that maximizes I (C,Xi); set X = X \ {X}, S = {X}.
 
 ##### 4. Greedy feature selection:<br />
 Repeat until the desired number of features is selected.<br />
@@ -126,20 +126,20 @@ Here, CU(Xi,Xs) = I(Xi, Xs) /H(Xs)<br />
 In the above algorithm, I(C, Xi) represents mutual information between C and Xi and
 H(Xs) represents entropy of variable Xs.<br />
 
-#### 3.1.4 Combined Feature information
-Threshold for the Markov blanket algorithm was kept at 0.01, which was shown to be
+#### 3.1.4 Combined Feature Information
+The threshold for the Markov blanket algorithm was kept at 0.01, which was shown to be
 an ideal numeric value according to Chapter 6 of Ensembles in Machine Learning
-Applications , T. Windeatt.<br />
+Applications, T. Windeatt.<br />
 
 The results of the above two algorithms produced features which were most likely the
 causes of the target variable.
 
 #### 3.1.5 Model construction and results
-Once the variable list was determined for each dataset, a SVM classification model
-was trained using the training dataset and the results of the test dataset was
+Once the variable list was determined for each dataset, an SVM classification model
+was trained using the training dataset, and the results of the test dataset were
 predicted. The generated variable list was then used to train another SVM classifier
-on the training dataset and the target value of the test dataset was generated for the
-same variables. The two target values for the two test datasets (one being he subset
+on the training dataset, and the target value of the test dataset was generated for the
+same variables. The two target values for the two test datasets (one being the subset
 of another) were compared to find the number of matches. Based on the comparison,
 the accuracy was predicted as follows:
 
