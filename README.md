@@ -25,6 +25,7 @@ Causal inference using Markov blanket
 The implementation of this method was majorly based on the following paper:
 [Laura E. Brown et al.; A Strategy for Making Predictions Under Manipulation; 2008]
 with references to the following papers:
+
 [1] Gavin C. Cawley; Causal and Non-Causal Feature Selection for Ridge
 Regression; 2009.
 
