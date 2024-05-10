@@ -1,46 +1,45 @@
 # Causal Inference Using Markov Blanket
 
 ## 1. ABSTRACT
-Causality in simple terms can be described as the agency that connects one process
+Causality, in simple terms, can be described as the agency that connects one process
 (the cause) with another (the effect), where the first process is responsible for the
-second and the second is dependent on the first. The causal inference problem
+second, and the second is dependent on the first. The causal inference problem
 usually consists of some features and a target variable. The goal of the problem is to
 identify the causes (features) of the target.
 
 ## 2. INTRODUCTION
-Over the course of this Independent Project, we worked on two methods which
+Over the course of this Independent Project, we worked on two methods that
 contribute towards causal inference for any given dataset. Both methods can
-generally be categorised as feature-selection methods. The first method use Markov
-blanket of a target variable for causal discovery [Laura E. Brown et. al.;2008],
-whereas the second method use linear SVM for feature selection [Yin-Wen Chang et
-al;2008.]. The feature set can be converted into a directed cause-effect graph, using
+generally be categorized as feature-selection methods. The first method uses the Markov
+blanket technique (of a target variable) for causal discovery [Brown et al. and Pellet et al.],
+whereas the second method uses linear SVM for feature selection [Chang et
+al.]. The feature set can be converted into a directed cause-effect graph, using
 which the causal inference for the target can be deduced. The Markov blanket
-consists of all the features in the cause-effect graph which can be called as parents,
-
-children and spouses of the target variable. The parents are the features that cause
-the target, the children are the ones that are caused by the target, and the spouses
-include the features that are equally responsible for the causation of the children.
+consists of all the features in the cause-effect graph, which are called parents,
+children, and spouses of the target variable. The parents are the features that cause
+the target, the children are caused by the target, and the spouses
+are the features equally responsible for the causation of the children.
 
 ## 3. METHODS
 Causal inference using Markov blanket
 The implementation of this method was majorly based on the following paper:
-[Laura E. Brown et. al.; A Strategy for Making Predictions Under Manipulation; 2008]
-with references of the following papers:
+[Laura E. Brown et al.; A Strategy for Making Predictions Under Manipulation; 2008]
+with references to the following papers:
 [1] Gavin C. Cawley; Causal and Non-Causal Feature Selection for Ridge
 Regression; 2009.
-[2] Jianxin Yin et al; Partial orientation and local structural learning of causal
+[2] Jianxin Yin et al. Partial orientation and local structural learning of causal
 networks for prediction; 2008.
-[3] Markus Kalisch et al; Causal inference using graphical models with the R
+[3] Markus Kalisch et al. Causal inference using graphical models with the R
 package pcalg; 2012.
-[4] Jean-Philippe pellet et al.; Using Markov blankets for causal structure learning;
+[4] Jean-Philippe Pellet et al.; Using Markov blankets for causal structure learning;
 2008.
 
 We were given the following datasets LUCAS, LUCAP, REGED, SIDO, CINA and
-MARTI with LUCAS, LUCAP and SIDO having binary data. My strategy was as
+MARTI. The datasets LUCAS, LUCAP, and SIDO have binary data. My strategy was as
 follows:
 
 ### 3.1.1 Pre-processing
-The REGED dataset consisted of discrete values which were normalized in the range
+The REGED dataset consisted of discrete values that were normalized in the range
 of [-1,1] such that their mean was 0 and std variance was 1. LUCAS, LUCAP and
 SIDO did not require any pre-processing.
 
