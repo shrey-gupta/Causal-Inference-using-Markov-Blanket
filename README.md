@@ -27,10 +27,13 @@ The implementation of this method was majorly based on the following paper:
 with references to the following papers:
 [1] Gavin C. Cawley; Causal and Non-Causal Feature Selection for Ridge
 Regression; 2009.
+
 [2] Jianxin Yin et al. Partial orientation and local structural learning of causal
 networks for prediction; 2008.
+
 [3] Markus Kalisch et al. Causal inference using graphical models with the R
 package pcalg; 2012.
+
 [4] Jean-Philippe Pellet et al.; Using Markov blankets for causal structure learning;
 2008.
 
