@@ -44,7 +44,7 @@ follows:
 
 ### 3.1.1 Pre-processing
 The REGED dataset consisted of discrete values that were normalized in the range
-of [-1,1] such that their mean was 0 and std variance was 1. LUCAS, LUCAP and
+of [-1,1] such that their mean = 0 and std deviation = 1. LUCAS, LUCAP and
 SIDO did not require any pre-processing.
 
 ### 3.1.2 Markov blanket generation
@@ -53,8 +53,11 @@ Markov blankets. We chose IAMB because it produces better results under the
 faithfulness condition.
 The correctness of IAMB is under the assumption of the faithfulness condition which
 is as follows:
+
 1. The learning database D is an independent and identically distributed sample from
-a probability distribution p faithful to a DAG G. 2. The tests of conditional
+a probability distribution p faithful to a DAG G.
+
+2. The tests of conditional
 independence and the measure of conditional dependence are correct.
 
 ### ALGORITHM 1: IAMB (Incremental association Markov Blanket )
