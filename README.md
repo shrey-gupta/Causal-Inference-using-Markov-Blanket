@@ -48,10 +48,10 @@ of [-1,1] such that their mean = 0 and std deviation = 1. LUCAS, LUCAP and
 SIDO did not require any pre-processing.
 
 ### 3.1.2 Markov blanket generation
-The following algorithms such as PC, TPDA, GS and IAMB can be used to generate
+The following algorithms such as PC, TPDA, GS, and IAMB can be used to generate
 Markov blankets. We chose IAMB because it produces better results under the
 faithfulness condition.
-The correctness of IAMB is under the assumption of the faithfulness condition which
+The correctness of IAMB is under the assumption of the faithfulness condition, which
 is as follows:
 
 1. The learning database D is an independent and identically distributed sample from
@@ -60,7 +60,7 @@ a probability distribution p faithful to a DAG G.
 2. The tests of conditional
 independence and the measure of conditional dependence are correct.
 
-### ALGORITHM 1: IAMB (Incremental association Markov Blanket )
+### ALGORITHM 1: IAMB (Incremental Association Markov Blanket )
 #### IAMB(dataset D; target T)
 
 1: MB(T) = Phi <br />
@@ -91,16 +91,16 @@ If X is independent of T given MB(T)
 12: End For <br />
 13: Return MB(T) <br />
 
-Here, ⊥ represents independence condition and MI(X; T | MB(T)) indicates mutual
-information between X and T given the set MB(T). MB(T) represents Markov blanket
+Here, ⊥ represents the independence condition, and MI(X; T | MB(T)) indicates mutual
+information between X and T given the set MB(T). MB(T) represents the Markov blanket
 for the target variable. Mutual information is used as a test for conditional
-independence. Other tests such as Chi-square test etc. can also be used.
+independence. Other tests, such as the Chi-square test etc., can also be used.
 
 #### 3.1.3 Conditional Independence test
 Below is the algorithm to find conditional independence between two variables
 conditioned on a set. <br />
 
-### ALGORITHM 2 : Conditional Independence
+### ALGORITHM 2: Conditional Independence
 ##### 1. Initialization: <br />
 Set S = “empty set”, set X = ”initial set of all D features”. <br />
 
